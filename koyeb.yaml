@@ -1,0 +1,11 @@
+name: real-time-logs
+services:
+  - name: real-time-logs-service
+    port: 3000
+    routes:
+      - name: default-route
+        path: "/"
+    build:
+      type: dockerfile
+      dockerfile: Dockerfile
+    instance_type: "nano" # Loại instance (nano là nhỏ nhất)
